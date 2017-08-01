@@ -34,8 +34,9 @@ public class DateUtil {
 	 * @return
 	 * @throws ParseException
 	 */
-	public static String formatDate(Date date, String pattern) throws ParseException {
-		return getDateFormat(pattern).format(date);
+	public static String formatDate(Date date, String pattern) {
+		String ymd = getDateFormat(pattern).format(date);
+		return ymd;
 	}
 
 	/**
@@ -48,7 +49,14 @@ public class DateUtil {
 	 * @return
 	 * @throws ParseException
 	 */
-	public static Date parse(String date, String pattern) throws ParseException {
-		return getDateFormat(pattern).parse(date);
+	public static Date parse(String date, String pattern) {
+		Date parseDate = null;
+		try {
+			parseDate = getDateFormat(pattern).parse(date);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return parseDate;
 	}
 }
