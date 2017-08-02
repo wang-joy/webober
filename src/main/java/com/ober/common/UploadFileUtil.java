@@ -93,7 +93,8 @@ public class UploadFileUtil {
 		// 文件保存目录路径
 		String savePath = request.getSession().getServletContext().getRealPath("/") + basePath + File.separator;
 		// 文件保存的目录URL
-		String saveUrl = request.getContextPath() + "/" + basePath + "/";
+		String basePath = getBasePath();
+		String saveUrl = basePath + "/";
 		File uploadDir = new File(savePath);
 		if (contenType == null || !contenType.startsWith("multipart")) {
 			System.out.println("请求不包含multipart/form-data流");
