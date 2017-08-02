@@ -1,4 +1,4 @@
-package com.ober.common;
+package com.ober.utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;

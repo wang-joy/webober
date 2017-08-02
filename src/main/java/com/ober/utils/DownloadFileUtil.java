@@ -1,4 +1,4 @@
-package com.ober.common;
+package com.ober.utils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
